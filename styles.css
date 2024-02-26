@@ -1,0 +1,244 @@
+.wrapper{
+    width:100%;
+}
+
+
+
+
+.body {
+    background-color: #D4E6F1;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0.2px;
+    background-color: white;
+    border-radius: 5px;
+    flex-wrap: wrap;
+
+}
+
+
+.internal_container_1 {
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    border-collapse: collapse;
+
+}
+
+.internal_container_2 {
+    padding: 5px;
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 2px;
+    flex-wrap: wrap;
+    border-collapse: collapse;
+}
+
+.internal_container_3 {
+    padding: 10px;
+    background-color: white;
+    border-radius: 2px;
+    flex-wrap: wrap;
+
+}
+
+.table {
+    border: 2px solid #333;
+    border-radius: 2px;
+    padding: 0.1px;
+    background-color: white;
+    overflow-x: auto;
+    overflow-y: auto;
+    border-collapse: collapse;
+
+}
+
+.p {
+    text-align: left;
+  }
+.table th, .table td {
+    border: 1px solid #333; /* Add border to each cell */
+    padding: 8px; /* Add padding for better readability */
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header img {
+    display: flex;
+    opacity: 0.4;
+    margin-right: 50px;
+}
+
+.h1 {
+    flex:1;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+
+.img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+}
+.h2 {
+    margin-bottom: 10px;
+}
+
+
+
+
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.li {
+    display: inline-block;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav li {
+    display: inline;
+}
+
+
+
+
+.list-item {
+            display: inline-block;
+            margin-right: 10px; /* Adjust as needed for spacing */
+}
+
+
+
+
+
+
+.download-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+/* Add some margin to the icon */
+.download-icon {
+    margin-right: 5px;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-pane, .right-pane {
+    flex: 1;
+    padding: 3px;
+    background-color: #f0f0f0;
+}
+
+.left-pane {
+    flex: 1;
+}
+
+.right-pane {
+    flex: 2;
+}
+
+
+
+.button {
+    display: inline-block;
+    padding: 1px 1px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.pathwayDiagram {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 786px) {
+    .layout {
+        flex-direction: column; /* Stack them vertically */
+        align-items: center; /* Center them */
+    }
+
+    .left-pane, .right-pane {
+        width: 100%; /* Make them take up full width */
+    }
+    header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    header img {
+        height: 60px;
+    }
+    h1 {
+        font-size: 18px;
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 760px) {
+    h1 {
+        font-size: 30px;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+}
+
