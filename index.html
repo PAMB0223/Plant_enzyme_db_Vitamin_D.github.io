@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamin D - plant related enzyme databse</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container" id="title">
+        <header style="display: flex; align-items: center; justify-content: center;" >
+            <img id="sun" style="display: inline-block; margin-right: 45px; opacity: 0.6;" src="images/sun_1.png" alt="Image" height="90">
+            <h1 style="display: inline-block; text-align: center;">Plant Enzyme database - Vitamin D </h1>
+            <img id="food_crop" style="display: inline-block; margin-left: 50px; opacity: 0.4;" src="images/food_crop.png" alt="Image" height="90">
+        </header>
+
+        <hr>
+
+        <div class="nav-container" id="nav" style="background-color: #f0f0f0; center; " >
+        <nav>
+            <ul style="margin-bottom: 2px; margin-top: 0.5px;" >
+                <li><a class="button" href="#" onclick="showPopup_about()">About</a></li>
+                <li><a class="button" href="mailto:nuvinod94@gmail.com"><span style="font-size: 1.2em;">✉️</span></a></li>
+            </ul>
+        </nav>
+        </div>
+
+    <div class="internal_container_1" style="width: auto; height:auto;"  >
+        <div class="layout" >
+            <div class="left-pane" >
+                <section class="internal_container_2"  style="text-align: center;" id="introduction">
+                    <h2 style="  padding: 3px; text-align: center; margin-bottom: 3px; margin-top: 3px;">Introduction</h2>
+                    <div style="text-align: justify; border: 2px solid #9a9a9a; ">
+
+                    <h4 style="text-align: center; margin-bottom: 0;">Significance of Vitamin D for Plants and Animals:</h4>
+                    <p  style="margin-top: 3px;">
+                    Vitamin D, a fat-soluble secosteroid, holds pivotal significance across biological kingdoms. Vitamin D is crucial for both plants and animals due to its role in calcium metabolism. In plants, it aids in calcium uptake, which is essential for cell wall structure, enzyme activation, and overall growth. In animals, vitamin D is vital for calcium absorption in the intestines, enabling proper bone formation and maintenance, nerve function, and muscle contractions.
+                    </p>
+                    <h4 style="text-align: center; margin-bottom: 0;">Need for Biofortification of Food Crops with Vitamin D:</h4>
+                    <p   style="margin-top: 3px;">
+                    The imperative to enrich food crops with Vitamin D arises from a confluence of evolving work routines, contemporary lifestyles, and geographic considerations. Modern urbanized environments and altered occupational dynamics have led to diminished sunlight exposure, a primary source of Vitamin D. This insufficiency is exacerbated in regions with limited sunlight availability. Consequently, there is a pressing need to devise strategies to ensure adequate intake of this essential nutrient. Biofortification of staple crops with Vitamin D emerges as a scientifically grounded and practical approach to fortify daily dietary intake.
+                    </p>
+                    </div>
+                </section>
+            </div>
+            <div class="right-pane" style="text-align: center;" id="flow_chart_div" >
+                <section class="internal_container_2" style="text-align: center;" id="flow_chart_sec" >
+                <h2 style="text-align: center; margin-bottom: 8.5px; margin-top: 3px;">Plant Sterol Synthesis Metabolic Pathway</h2>
+                <iframe id="flow_chart_iframe" src="Sterol_bio_synthesis_flow_chart.html" frameborder="1" style="width:100%; height:515px; display: inline-block; margin: 0 auto;"  ></iframe>
+                </section>
+            </div>
+
+    </div>
+    </div>
+    <br>
+
+
+
+    <div>
+        <div >
+                <section  class="table" id="table_1_sec" >
+                    <h2 style="background-color: #F2F3F4; border: 1px solid #ccc; padding: 10px; text-align: center;">Enzyme Information</h2>
+                    <iframe  src="table_1.html" frameborder="1" style="width:100%; height:400px; "></iframe>
+                </section>
+    </div>
+
+
+
+
+    </div>
+
+ <script>
+    function handleResize() {
+        const screenWidth = window.innerWidth;
+        const sunImage = document.getElementById('sun');
+        const foodCropImage = document.getElementById('food_crop');
+        const flowChartIframe = document.getElementById('flow_chart_iframe');
+
+        if (screenWidth <= 850) {
+            sunImage.style.display = 'none';
+            foodCropImage.style.display = 'none';
+            flowChartIframe.src = 'Sterol_bio_synthesis_flow_chart_vertical.html';
+        } else {
+            sunImage.style.display = 'block';
+            foodCropImage.style.display = 'block';
+            flowChartIframe.src = 'Sterol_bio_synthesis_flow_chart.html';
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    window.addEventListener('resize', handleResize);
+    // Call the function on page load
+    handleResize();
+
+     function showPopup_about() {
+        alert("Academic project");
+    }
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
