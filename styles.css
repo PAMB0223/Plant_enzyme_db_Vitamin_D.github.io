@@ -242,3 +242,61 @@ nav li {
 
 }
 
+/* CSS for styling the hamburger menu button */
+.menu-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 10px;
+}
+/* Styling for the hamburger icon bars */
+.menu-btn span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 3px auto;
+    transition: all 0.3s ease-in-out;
+}
+/* Styling for the animation when the hamburger menu is clicked */
+.menu-btn.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-btn.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+/* CSS for styling the menu when it's opened */
+.menu {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    z-index: 1000;
+    width: 150px; /* Adjust the width as needed */
+}
+
+.menu ul {
+    list-style-type: disc; /* Set list items as bullet points */
+    list-style-color: #333; /* Set the color of the bullet points */
+    padding-left: 20px; /* Add some left padding for better spacing */
+    margin: 0; /* Remove default margin */
+}
+
+.menu li a {
+    color: #333; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Display anchor tags as block elements */
+}
+
+.menu li a:hover {
+    color: red; /* Change link color on hover */
+}
