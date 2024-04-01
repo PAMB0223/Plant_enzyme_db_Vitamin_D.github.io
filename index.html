@@ -19,14 +19,31 @@
 
         <hr>
 
-        <div class="nav-container" id="nav" style="background-color: #f0f0f0; center; " >
-        <nav>
-            <ul style="margin-bottom: 2px; margin-top: 0.5px;" >
-                <li><a class="button" href="#" onclick="showPopup_about()">About</a></li>
-                <li><a class="button" href="mailto:nuvinod94@gmail.com"><span style="font-size: 1.2em;">✉️</span></a></li>
-            </ul>
-        </nav>
+        <div class="nav-container" id="nav" style="background-color: #f0f0f0; text-align: center;">
+            <nav>
+                <ul style="margin-bottom: 2px; margin-top: 0.5px; display: flex; justify-content: center; align-items: center;">
+                 <li>
+                        <button class="menu-btn" id="menuBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                      <ul class="menu" id="menu" style="list-style-type: disc; text-align: left; padding-left: 20px;">
+                        <li style="margin-right: 10px;"><a class="button" href="#" onclick="showPopup_about()">About</a></li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#flow_chart_sec">Metabolic Pathway</a></li>
+                        <li><a href="#table_1_sec">Enzyme Information</a></li>
+                        <li><a href="#frequency_matrix">Enzyme source frequency matrix</a></li>
+                    </ul>
+
+                    </li>
+                    <li style="margin-right: 10px;"><a class="button" href="mailto:nuvinod94@gmail.com"><span style="font-size: 1.2em;">✉️</span></a></li>
+
+                </ul>
+            </nav>
         </div>
+
+
 
     <div class="internal_container_1" style="width: auto; height:auto;"  >
         <div class="layout" >
@@ -57,6 +74,8 @@
     </div>
     <br>
 
+
+
     <div>
         <div >
                 <section  class="table" id="table_1_sec" >
@@ -66,10 +85,14 @@
     </div>
     <br>
 
-    <div class="internal_container_1" style="width: auto; height:auto;" >
+    <div class="internal_container_1" style="width: auto; height:auto;"  id="frequency_matrix">
+
     <h4> Enzyme source frequency matrix </h4>
     <a href="excel_data/Enzyme_source_freq_matrix.xlsx" download="Enzyme_source_freq_matrix.xlsx">Click here </a> to download matrix detailing the availability of reported number for each source
     </div>
+
+
+
 
     </div>
 
@@ -90,7 +113,12 @@
             flowChartIframe.src = 'Sterol_bio_synthesis_flow_chart.html';
         }
     }
-
+    // JavaScript to toggle menu visibility
+    document.getElementById("menuBtn").addEventListener("click", function() {
+        this.classList.toggle("open");
+        var menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "none" || menu.style.display === "" ? "block" : "none";
+    });
     window.addEventListener('resize', handleResize);
     // Call the function on page load
     handleResize();
@@ -98,8 +126,6 @@
      function showPopup_about() {
         alert("Academic project");
     }
-
-
 </script>
 
 
